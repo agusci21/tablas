@@ -2,7 +2,8 @@ const { crearArchivoTabla } = require('./helpers/multiplicar.js')
 
 console.clear()
 
-const base = 1 / 0
+const [, , arg3 = 'base=0'] = process.argv
+const [, base = 0] = arg3.split('=')
 
 crearArchivoTabla(base)
   .then((nombreArchivo) => console.log(nombreArchivo, 'creado'))
