@@ -1,10 +1,10 @@
 const { crearArchivoTabla } = require('./helpers/multiplicar.js')
+const argv =require('yargs').argv
 
 console.clear()
 
-const [, , arg3 = 'base=0'] = process.argv
-const [, base = 0] = arg3.split('=')
+console.log(process.argv)
 
-crearArchivoTabla(base)
-  .then((nombreArchivo) => console.log(nombreArchivo, 'creado'))
-  .catch((err) => console.log(err))
+console.log(argv)
+
+

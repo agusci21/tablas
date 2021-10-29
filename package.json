@@ -10,7 +10,8 @@
   "author": "Agustin Cola",
   "license": "MIT",
   "dependencies": {
-    "colors": "^1.4.0"
+    "colors": "^1.4.0",
+    "yargs": "^17.2.1"
   },
   "devDependencies": {}
 }
