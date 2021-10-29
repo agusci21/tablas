@@ -1,17 +1,17 @@
 const fs = require('fs')
 
-const crearArchivoTabla = async (base = 5, l) => {
+const crearArchivoTabla = async (base = 5, hasta, listar) => {
   try {
-    
-
     let salida = ''
 
-    for (let i = 0; i <= 10; i++) {
-      salida += `${base} x ${i} = ${base * i} \n`
+    console.log(listar)
+
+    for (let i = 0; i <= hasta; i++) {
+      salida += `${base} ${'x'.green} ${i} ${'='.green} ${base * i} \n`
     }
 
-    if (l == true) {
-      console.log(`<==========> Tabla del ${base} <==========> \n`)
+    if (listar == true) {
+      console.log(`<==========> Tabla del ${base} <==========> \n`.rainbow)
       console.log(salida)
     }
 
@@ -22,7 +22,7 @@ const crearArchivoTabla = async (base = 5, l) => {
         console.log(err)
         throw err
       } else if (!err) {
-        console.log(`Tabla del ${base} Creada`)
+        console.log(`Tabla del ${base} Creada`.green)
       }
     })
     return nombreArchivo
